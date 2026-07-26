@@ -1,0 +1,68 @@
+{
+  "description": "FM2024 针对性调整规则库",
+  "rules": {
+    "formation_counters": {
+      "433": {"recommended_formation": "4231", "reason": "中场人数对等，AMC可以在双后腰和防线间活动"},
+      "4231": {"recommended_formation": "433", "reason": "三中场压制双后腰，边锋牵制边后卫"},
+      "442": {"recommended_formation": "433", "reason": "三中场控制力碾压双中场442"},
+      "352": {"recommended_formation": "424", "reason": "双边锋利用翼卫身后空间"},
+      "532": {"recommended_formation": "4231", "reason": "边路人数压制，中场人数优势"},
+      "4141": {"recommended_formation": "4231", "reason": "AMC在DM和防线间的空间是关键"},
+      "41212": {"recommended_formation": "442", "reason": "边路宽度克制菱形中场"}
+    },
+    "style_counters": {
+      "gegenpress": {
+        "instructions": ["减少后场短传", "打对手身后", "门将长传找前锋"],
+        "reason": "高压逼抢会暴露后场空间，快速长传可以避开压迫"
+      },
+      "tiki_taka": {
+        "instructions": ["保持阵型紧凑", "不盲目上抢", "断球后快速反击"],
+        "reason": "控球球队最怕快速转换，断球瞬间是他们最脆弱的时候"
+      },
+      "direct_counter": {
+        "instructions": ["耐心控球", "留人保护后场", "不要全线压上"],
+        "reason": "反击球队喜欢对手压上，保持耐心等待他们主动出击"
+      },
+      "wing_play": {
+        "instructions": ["收缩防守宽度", "逼对方走中路", "边后卫不要冒进"],
+        "reason": "限制边路空间等于废掉对手的主要进攻手段"
+      },
+      "park_the_bus": {
+        "instructions": ["远射", "定位球", "更多传中", "加快节奏"],
+        "reason": "密集防守需要远射打破僵局，定位球是关键"
+      }
+    },
+    "player_type_counters": {
+      "fast_striker": {
+        "instruction": "防线降低一格，减少紧逼，使用协防后卫",
+        "reason": "不给速度型前锋冲刺空间"
+      },
+      "tall_striker": {
+        "instruction": "限制边路传中，防守时逼对方走中路",
+        "reason": "减少传中次数，降低争顶机会"
+      },
+      "creative_playmaker": {
+        "instruction": "针对性盯人 + 凶狠铲抢",
+        "reason": "不让组织核心舒舒服服拿球转身"
+      },
+      "dribbler": {
+        "instruction": "不轻易出脚，降低紧逼强度",
+        "reason": "容易被过掉后失去防守位置"
+      }
+    },
+    "match_situation": {
+      "protecting_lead": {
+        "instructions": ["降低节奏", "更多拖延时间", "回收防线", "减少紧逼"],
+        "time": "75分钟后"
+      },
+      "chasing_goal": {
+        "instructions": ["提高节奏", "高位压迫", "全线压上", "更多传中"],
+        "time": "75分钟后"
+      },
+      "counter_attack_away": {
+        "instructions": ["谨慎心态", "稳固防守", "抓反击机会"],
+        "situation": "客场强敌"
+      }
+    }
+  }
+}

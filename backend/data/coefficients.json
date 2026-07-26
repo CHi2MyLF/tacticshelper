@@ -1,0 +1,107 @@
+{
+  "description": "FM-Arena attribute coefficients by position. Based on community empirical testing (2400+ matches). Higher coefficient = more impactful for the position.",
+  "source": "FM-Arena positional testing (Orion experiment 2024-2025)",
+  "meta_weights": {
+    "description": "Universal attribute tier weights across all positions",
+    "tiers": {
+      "extremely_important": {"weight": 8.0, "attrs": ["pace", "acceleration"]},
+      "very_important": {"weight": 4.0, "attrs": ["jumping_reach", "anticipation", "balance", "agility", "concentration"]},
+      "important": {"weight": 2.0, "attrs": ["work_rate", "dribbling", "stamina", "strength", "passing", "determination", "vision"]},
+      "decent": {"weight": 1.0, "attrs": ["long_shots", "marking", "decisions", "first_touch"]},
+      "minor": {"weight": 0.5, "attrs": ["off_the_ball", "tackling", "teamwork", "composure", "technique", "positioning"]},
+      "situational": {"weight": 0.2, "attrs": ["corners", "crossing", "finishing", "free_kicks", "heading", "long_throws", "penalty_taking", "aggression", "bravery", "flair", "leadership"]}
+    }
+  },
+  "position_coefficients": {
+    "description": "Per-position attribute coefficients from polynomial regression on match engine results",
+    "GK": {
+      "agility": 0.014640, "reflexes": 0.012837, "aerial_reach": 0.011812,
+      "throwing": 0.007465, "command_of_area": 0.007436, "handling": 0.006255,
+      "decisions": 0.005089, "rushing_out": -0.003310
+    },
+    "DR": {
+      "pace": 0.018991, "jumping_reach": 0.014582, "acceleration": 0.012670,
+      "anticipation": 0.012269, "concentration": 0.009911, "dribbling": 0.008246,
+      "composure": 0.007720, "crossing": 0.006812, "positioning": 0.006200,
+      "tackling": 0.005900, "stamina": 0.005500, "work_rate": 0.005200
+    },
+    "DL": {
+      "pace": 0.018991, "jumping_reach": 0.014582, "acceleration": 0.012670,
+      "anticipation": 0.012269, "concentration": 0.009911, "dribbling": 0.008246,
+      "composure": 0.007720, "crossing": 0.006812, "positioning": 0.006200,
+      "tackling": 0.005900, "stamina": 0.005500, "work_rate": 0.005200
+    },
+    "DC": {
+      "jumping_reach": 0.022608, "pace": 0.015882, "acceleration": 0.013536,
+      "work_rate": 0.010819, "anticipation": 0.010326, "positioning": 0.008864,
+      "passing": 0.008826, "concentration": 0.008358, "tackling": 0.007900,
+      "heading": 0.007500, "strength": 0.007200, "bravery": 0.006500,
+      "composure": 0.006000, "decisions": 0.005500
+    },
+    "WBR": {
+      "pace": 0.019196, "acceleration": 0.018585, "jumping_reach": 0.013761,
+      "composure": 0.011762, "vision": 0.010025, "crossing": 0.009596,
+      "work_rate": 0.008166, "determination": 0.005121, "dribbling": 0.007500,
+      "stamina": 0.007200, "tackling": 0.005800, "anticipation": 0.005500
+    },
+    "WBL": {
+      "pace": 0.019196, "acceleration": 0.018585, "jumping_reach": 0.013761,
+      "composure": 0.011762, "vision": 0.010025, "crossing": 0.009596,
+      "work_rate": 0.008166, "determination": 0.005121, "dribbling": 0.007500,
+      "stamina": 0.007200, "tackling": 0.005800, "anticipation": 0.005500
+    },
+    "DM": {
+      "acceleration": 0.020572, "anticipation": 0.013047, "stamina": 0.010352,
+      "jumping_reach": 0.009796, "composure": 0.009470, "passing": 0.009114,
+      "long_shots": 0.007952, "dribbling": 0.007338, "tackling": 0.006800,
+      "work_rate": 0.006500, "positioning": 0.006200, "decisions": 0.005800
+    },
+    "MC": {
+      "anticipation": 0.014011, "acceleration": 0.012595, "composure": 0.012589,
+      "pace": 0.012156, "crossing": 0.010100, "dribbling": 0.008134,
+      "jumping_reach": 0.007918, "strength": 0.006528, "passing": 0.006200,
+      "vision": 0.005800, "first_touch": 0.005500, "work_rate": 0.005200
+    },
+    "MR": {
+      "pace": 0.020497, "dribbling": 0.014018, "acceleration": 0.012883,
+      "composure": 0.012072, "vision": 0.011542, "jumping_reach": 0.011150,
+      "crossing": 0.010598, "stamina": 0.009658, "first_touch": 0.006500,
+      "passing": 0.006200, "off_the_ball": 0.005500
+    },
+    "ML": {
+      "pace": 0.020497, "dribbling": 0.014018, "acceleration": 0.012883,
+      "composure": 0.012072, "vision": 0.011542, "jumping_reach": 0.011150,
+      "crossing": 0.010598, "stamina": 0.009658, "first_touch": 0.006500,
+      "passing": 0.006200, "off_the_ball": 0.005500
+    },
+    "AMR": {
+      "pace": 0.023458, "acceleration": 0.019640, "anticipation": 0.015160,
+      "crossing": 0.014857, "dribbling": 0.013533, "jumping_reach": 0.013029,
+      "technique": 0.012662, "composure": 0.012295, "finishing": 0.008000,
+      "off_the_ball": 0.007500, "first_touch": 0.006500, "vision": 0.006000
+    },
+    "AML": {
+      "pace": 0.023458, "acceleration": 0.019640, "anticipation": 0.015160,
+      "crossing": 0.014857, "dribbling": 0.013533, "jumping_reach": 0.013029,
+      "technique": 0.012662, "composure": 0.012295, "finishing": 0.008000,
+      "off_the_ball": 0.007500, "first_touch": 0.006500, "vision": 0.006000
+    },
+    "AMC": {
+      "pace": 0.016763, "acceleration": 0.016348, "concentration": 0.013697,
+      "composure": 0.012813, "technique": 0.011647, "long_shots": 0.009914,
+      "jumping_reach": 0.009524, "dribbling": 0.008679, "vision": 0.008000,
+      "passing": 0.007500, "finishing": 0.007000, "first_touch": 0.006500
+    },
+    "ST": {
+      "jumping_reach": 0.020557, "pace": 0.020096, "acceleration": 0.014496,
+      "concentration": 0.013675, "balance": 0.012043, "dribbling": 0.010739,
+      "vision": 0.009392, "composure": 0.009161, "finishing": 0.008500,
+      "off_the_ball": 0.008000, "first_touch": 0.007000, "heading": 0.006500
+    }
+  },
+  "pace_acceleration_dominance": {
+    "description": "Pace and Acceleration are universally the most important attributes across all outfield positions in FM24",
+    "average_weight": 0.016,
+    "compared_to_next_best": "Pace+Acceleration combined weight is ~2x the next best attribute in almost every position"
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "description": "FM2024 标准阵型模板，含位置槽和推荐角色",
+  "formations": {
+    "4231": {
+      "name": "4-2-3-1 Wide",
+      "label_zh": "4-2-3-1 双边锋",
+      "positions": [
+        {"slot": "GK", "x": 5, "y": 12, "eligible": ["GK"]},
+        {"slot": "DR", "x": 1, "y": 10, "eligible": ["DR", "WBR"]},
+        {"slot": "DCR", "x": 3, "y": 10, "eligible": ["DC"]},
+        {"slot": "DCL", "x": 7, "y": 10, "eligible": ["DC"]},
+        {"slot": "DL", "x": 9, "y": 10, "eligible": ["DL", "WBL"]},
+        {"slot": "MCR", "x": 3.5, "y": 7, "eligible": ["MC", "DM"]},
+        {"slot": "MCL", "x": 6.5, "y": 7, "eligible": ["MC", "DM"]},
+        {"slot": "AMR", "x": 1, "y": 4, "eligible": ["AMR", "MR"]},
+        {"slot": "AMC", "x": 5, "y": 5, "eligible": ["AMC", "MC"]},
+        {"slot": "AML", "x": 9, "y": 4, "eligible": ["AML", "ML"]},
+        {"slot": "STC", "x": 5, "y": 2, "eligible": ["ST"]}
+      ],
+      "requires": ["strong_amc", "double_pivot"],
+      "best_for": ["gegenpress", "possession_flexible", "tiki_taka"]
+    },
+    "433": {
+      "name": "4-3-3 DM Wide",
+      "label_zh": "4-3-3 单后腰",
+      "positions": [
+        {"slot": "GK", "x": 5, "y": 12, "eligible": ["GK"]},
+        {"slot": "DR", "x": 1, "y": 10, "eligible": ["DR", "WBR"]},
+        {"slot": "DCR", "x": 3, "y": 10, "eligible": ["DC"]},
+        {"slot": "DCL", "x": 7, "y": 10, "eligible": ["DC"]},
+        {"slot": "DL", "x": 9, "y": 10, "eligible": ["DL", "WBL"]},
+        {"slot": "DM", "x": 5, "y": 7.5, "eligible": ["DM", "MC"]},
+        {"slot": "MCR", "x": 3, "y": 5.5, "eligible": ["MC"]},
+        {"slot": "MCL", "x": 7, "y": 5.5, "eligible": ["MC"]},
+        {"slot": "AMR", "x": 1, "y": 3, "eligible": ["AMR", "MR"]},
+        {"slot": "AML", "x": 9, "y": 3, "eligible": ["AML", "ML"]},
+        {"slot": "STC", "x": 5, "y": 1.5, "eligible": ["ST"]}
+      ],
+      "requires": ["strong_dm", "creative_midfield"],
+      "best_for": ["gegenpress", "tiki_taka", "vertical_tiki_taka", "wing_play"]
+    },
+    "442": {
+      "name": "4-4-2",
+      "label_zh": "4-4-2 平行站位",
+      "positions": [
+        {"slot": "GK", "x": 5, "y": 12, "eligible": ["GK"]},
+        {"slot": "DR", "x": 1, "y": 10, "eligible": ["DR", "WBR"]},
+        {"slot": "DCR", "x": 3, "y": 10, "eligible": ["DC"]},
+        {"slot": "DCL", "x": 7, "y": 10, "eligible": ["DC"]},
+        {"slot": "DL", "x": 9, "y": 10, "eligible": ["DL", "WBL"]},
+        {"slot": "MR", "x": 1, "y": 5.5, "eligible": ["MR", "AMR"]},
+        {"slot": "MCR", "x": 3.5, "y": 5.5, "eligible": ["MC"]},
+        {"slot": "MCL", "x": 6.5, "y": 5.5, "eligible": ["MC"]},
+        {"slot": "ML", "x": 9, "y": 5.5, "eligible": ["ML", "AML"]},
+        {"slot": "STCR", "x": 4, "y": 2, "eligible": ["ST"]},
+        {"slot": "STCL", "x": 6, "y": 2, "eligible": ["ST"]}
+      ],
+      "requires": ["two_strikers", "traditional_wingers", "balanced_midfield"],
+      "best_for": ["direct_counter", "wing_play", "fluid_counter"]
+    },
+    "4141": {
+      "name": "4-1-4-1 DM Wide",
+      "label_zh": "4-1-4-1 防守型",
+      "positions": [
+        {"slot": "GK", "x": 5, "y": 12, "eligible": ["GK"]},
+        {"slot": "DR", "x": 1, "y": 10, "eligible": ["DR", "WBR"]},
+        {"slot": "DCR", "x": 3, "y": 10, "eligible": ["DC"]},
+        {"slot": "DCL", "x": 7, "y": 10, "eligible": ["DC"]},
+        {"slot": "DL", "x": 9, "y": 10, "eligible": ["DL", "WBL"]},
+        {"slot": "DM", "x": 5, "y": 7.5, "eligible": ["DM"]},
+        {"slot": "MR", "x": 1, "y": 5, "eligible": ["MR", "AMR"]},
+        {"slot": "MCR", "x": 3.5, "y": 5.5, "eligible": ["MC"]},
+        {"slot": "MCL", "x": 6.5, "y": 5.5, "eligible": ["MC"]},
+        {"slot": "ML", "x": 9, "y": 5, "eligible": ["ML", "AML"]},
+        {"slot": "STC", "x": 5, "y": 2, "eligible": ["ST"]}
+      ],
+      "requires": ["strong_dm", "hard_working_wide_players"],
+      "best_for": ["direct_counter", "fluid_counter", "wing_play"]
+    },
+    "352": {
+      "name": "3-5-2 WB",
+      "label_zh": "3-5-2 翼卫",
+      "positions": [
+        {"slot": "GK", "x": 5, "y": 12, "eligible": ["GK"]},
+        {"slot": "DCR", "x": 2, "y": 10, "eligible": ["DC"]},
+        {"slot": "DC", "x": 5, "y": 10.5, "eligible": ["DC"]},
+        {"slot": "DCL", "x": 8, "y": 10, "eligible": ["DC"]},
+        {"slot": "WBR", "x": 1, "y": 6, "eligible": ["WBR", "DR", "MR"]},
+        {"slot": "MCR", "x": 3, "y": 5.5, "eligible": ["MC"]},
+        {"slot": "MCL", "x": 7, "y": 5.5, "eligible": ["MC"]},
+        {"slot": "WBL", "x": 9, "y": 6, "eligible": ["WBL", "DL", "ML"]},
+        {"slot": "STCR", "x": 4, "y": 2, "eligible": ["ST"]},
+        {"slot": "STCL", "x": 6, "y": 2, "eligible": ["ST"]}
+      ],
+      "requires": ["three_centre_backs", "wing_backs", "two_strikers"],
+      "best_for": ["direct_counter", "wing_play"]
+    },
+    "532": {
+      "name": "5-3-2 WB",
+      "label_zh": "5-3-2 翼卫",
+      "positions": [
+        {"slot": "GK", "x": 5, "y": 12, "eligible": ["GK"]},
+        {"slot": "WBR", "x": 1, "y": 9, "eligible": ["WBR", "DR"]},
+        {"slot": "DCR", "x": 2.5, "y": 10, "eligible": ["DC"]},
+        {"slot": "DC", "x": 5, "y": 10.5, "eligible": ["DC"]},
+        {"slot": "DCL", "x": 7.5, "y": 10, "eligible": ["DC"]},
+        {"slot": "WBL", "x": 9, "y": 9, "eligible": ["WBL", "DL"]},
+        {"slot": "MCR", "x": 3, "y": 6, "eligible": ["MC"]},
+        {"slot": "MC", "x": 5, "y": 7, "eligible": ["MC"]},
+        {"slot": "MCL", "x": 7, "y": 6, "eligible": ["MC"]},
+        {"slot": "STCR", "x": 4, "y": 2, "eligible": ["ST"]},
+        {"slot": "STCL", "x": 6, "y": 2, "eligible": ["ST"]}
+      ],
+      "requires": ["three_centre_backs", "wing_backs", "two_strikers"],
+      "best_for": ["park_the_bus", "direct_counter"]
+    },
+    "424": {
+      "name": "4-2-4 Wide",
+      "label_zh": "4-2-4 双边锋",
+      "positions": [
+        {"slot": "GK", "x": 5, "y": 12, "eligible": ["GK"]},
+        {"slot": "DR", "x": 1, "y": 10, "eligible": ["DR", "WBR"]},
+        {"slot": "DCR", "x": 3, "y": 10, "eligible": ["DC"]},
+        {"slot": "DCL", "x": 7, "y": 10, "eligible": ["DC"]},
+        {"slot": "DL", "x": 9, "y": 10, "eligible": ["DL", "WBL"]},
+        {"slot": "MCR", "x": 3.5, "y": 7, "eligible": ["MC", "DM"]},
+        {"slot": "MCL", "x": 6.5, "y": 7, "eligible": ["MC", "DM"]},
+        {"slot": "AMR", "x": 1, "y": 3.5, "eligible": ["AMR", "ST"]},
+        {"slot": "AML", "x": 9, "y": 3.5, "eligible": ["AML", "ST"]},
+        {"slot": "STCR", "x": 4, "y": 1.5, "eligible": ["ST"]},
+        {"slot": "STCL", "x": 6, "y": 1.5, "eligible": ["ST"]}
+      ],
+      "requires": ["attacking_mentality", "four_attackers", "solid_double_pivot"],
+      "best_for": ["gegenpress", "wing_play"]
+    },
+    "41212": {
+      "name": "4-1-2-1-2 Narrow",
+      "label_zh": "4-1-2-1-2 菱形中场",
+      "positions": [
+        {"slot": "GK", "x": 5, "y": 12, "eligible": ["GK"]},
+        {"slot": "DR", "x": 1, "y": 10, "eligible": ["DR", "WBR"]},
+        {"slot": "DCR", "x": 3, "y": 10, "eligible": ["DC"]},
+        {"slot": "DCL", "x": 7, "y": 10, "eligible": ["DC"]},
+        {"slot": "DL", "x": 9, "y": 10, "eligible": ["DL", "WBL"]},
+        {"slot": "DM", "x": 5, "y": 7.5, "eligible": ["DM"]},
+        {"slot": "MCR", "x": 3, "y": 6, "eligible": ["MC"]},
+        {"slot": "MCL", "x": 7, "y": 6, "eligible": ["MC"]},
+        {"slot": "AMC", "x": 5, "y": 3.5, "eligible": ["AMC"]},
+        {"slot": "STCR", "x": 4, "y": 1.5, "eligible": ["ST"]},
+        {"slot": "STCL", "x": 6, "y": 1.5, "eligible": ["ST"]}
+      ],
+      "requires": ["attacking_fullbacks", "strong_dm", "creative_amc", "two_strikers"],
+      "best_for": ["tiki_taka", "possession_flexible", "vertical_tiki_taka"]
+    }
+  }
+}

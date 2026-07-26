@@ -1,0 +1,7 @@
+node_modules/
+__pycache__/
+*.pyc
+data/fm_advisor.db
+data/config.json
+data/chroma/
+dist/

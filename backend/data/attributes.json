@@ -1,0 +1,73 @@
+{
+  "categories": {
+    "technical": {
+      "label_zh": "技术属性",
+      "label_en": "Technical",
+      "attrs": ["corners", "crossing", "dribbling", "finishing", "first_touch", "free_kicks", "heading", "long_shots", "long_throws", "marking", "passing", "penalty_taking", "tackling", "technique"]
+    },
+    "mental": {
+      "label_zh": "精神属性",
+      "label_en": "Mental",
+      "attrs": ["aggression", "anticipation", "bravery", "composure", "concentration", "decisions", "determination", "flair", "leadership", "off_the_ball", "positioning", "teamwork", "vision", "work_rate"]
+    },
+    "physical": {
+      "label_zh": "身体属性",
+      "label_en": "Physical",
+      "attrs": ["acceleration", "agility", "balance", "jumping_reach", "natural_fitness", "pace", "stamina", "strength"]
+    },
+    "goalkeeping": {
+      "label_zh": "门将属性",
+      "label_en": "Goalkeeping",
+      "attrs": ["aerial_reach", "command_of_area", "communication", "eccentricity", "handling", "kicking", "one_on_ones", "reflexes", "rushing_out", "throwing", "tendency_to_punch"]
+    }
+  },
+  "attribute_labels": {
+    "acceleration": {"zh": "爆发力", "en": "Acceleration"},
+    "agility": {"zh": "灵活", "en": "Agility"},
+    "balance": {"zh": "平衡", "en": "Balance"},
+    "jumping_reach": {"zh": "弹跳", "en": "Jumping Reach"},
+    "natural_fitness": {"zh": "体质", "en": "Natural Fitness"},
+    "pace": {"zh": "速度", "en": "Pace"},
+    "stamina": {"zh": "耐力", "en": "Stamina"},
+    "strength": {"zh": "强壮", "en": "Strength"},
+    "corners": {"zh": "角球", "en": "Corners"},
+    "crossing": {"zh": "传中", "en": "Crossing"},
+    "dribbling": {"zh": "盘带", "en": "Dribbling"},
+    "finishing": {"zh": "射门", "en": "Finishing"},
+    "first_touch": {"zh": "停球", "en": "First Touch"},
+    "free_kicks": {"zh": "任意球", "en": "Free Kicks"},
+    "heading": {"zh": "头球", "en": "Heading"},
+    "long_shots": {"zh": "远射", "en": "Long Shots"},
+    "long_throws": {"zh": "界外球", "en": "Long Throws"},
+    "marking": {"zh": "盯人", "en": "Marking"},
+    "passing": {"zh": "传球", "en": "Passing"},
+    "penalty_taking": {"zh": "点球", "en": "Penalty Taking"},
+    "tackling": {"zh": "抢断", "en": "Tackling"},
+    "technique": {"zh": "技术", "en": "Technique"},
+    "aggression": {"zh": "侵略性", "en": "Aggression"},
+    "anticipation": {"zh": "预判", "en": "Anticipation"},
+    "bravery": {"zh": "勇敢", "en": "Bravery"},
+    "composure": {"zh": "镇定", "en": "Composure"},
+    "concentration": {"zh": "集中", "en": "Concentration"},
+    "decisions": {"zh": "决断", "en": "Decisions"},
+    "determination": {"zh": "决心", "en": "Determination"},
+    "flair": {"zh": "才华", "en": "Flair"},
+    "leadership": {"zh": "领导力", "en": "Leadership"},
+    "off_the_ball": {"zh": "无球跑动", "en": "Off the Ball"},
+    "positioning": {"zh": "防守站位", "en": "Positioning"},
+    "teamwork": {"zh": "团队合作", "en": "Teamwork"},
+    "vision": {"zh": "视野", "en": "Vision"},
+    "work_rate": {"zh": "工作投入", "en": "Work Rate"},
+    "aerial_reach": {"zh": "制空范围", "en": "Aerial Reach"},
+    "command_of_area": {"zh": "指挥防守", "en": "Command of Area"},
+    "communication": {"zh": "沟通", "en": "Communication"},
+    "eccentricity": {"zh": "神经指数", "en": "Eccentricity"},
+    "handling": {"zh": "手控球", "en": "Handling"},
+    "kicking": {"zh": "大脚开球", "en": "Kicking"},
+    "one_on_ones": {"zh": "一对一", "en": "One on Ones"},
+    "reflexes": {"zh": "反应", "en": "Reflexes"},
+    "rushing_out": {"zh": "出击", "en": "Rushing Out"},
+    "throwing": {"zh": "手抛球", "en": "Throwing"},
+    "tendency_to_punch": {"zh": "击球倾向", "en": "Tendency to Punch"}
+  }
+}

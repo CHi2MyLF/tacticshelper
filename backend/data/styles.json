@@ -1,0 +1,312 @@
+{
+  "description": "战术风格 → FM2024 球队指令映射",
+  "styles": {
+    "gegenpress": {
+      "label_zh": "高压逼抢 (Gegenpress)",
+      "label_en": "Gegenpress",
+      "description_zh": "克洛普风格：极致高位压迫、快速转换、垂直进攻",
+      "mentality": "attacking",
+      "instructions": {
+        "in_possession": {
+          "attacking_width": "fairly_wide",
+          "passing_directness": "slightly_more_direct",
+          "tempo": "much_higher",
+          "time_wasting": "never",
+          "play_out_of_defense": false,
+          "overlap_left": false,
+          "overlap_right": false,
+          "focus_play": null,
+          "dribbling": "run_at_defence"
+        },
+        "in_transition": {
+          "counter_press": true,
+          "counter": true,
+          "distribute_quickly": true,
+          "distribute_to": "flanks"
+        },
+        "out_of_possession": {
+          "defensive_line": "much_higher",
+          "line_of_engagement": "much_higher",
+          "pressing_intensity": "extremely_urgent",
+          "tackling": "get_stuck_in",
+          "offside_trap": true,
+          "prevent_short_gk_distribution": true,
+          "trigger_press": "much_more_often"
+        }
+      }
+    },
+    "tiki_taka": {
+      "label_zh": "传控足球 (Tiki-Taka)",
+      "label_en": "Tiki-Taka",
+      "description_zh": "瓜迪奥拉风格：极致控球、短传渗透、高位防守",
+      "mentality": "positive",
+      "instructions": {
+        "in_possession": {
+          "attacking_width": "fairly_narrow",
+          "passing_directness": "much_shorter",
+          "tempo": "much_lower",
+          "time_wasting": "sometimes",
+          "play_out_of_defense": true,
+          "overlap_left": false,
+          "overlap_right": false,
+          "focus_play": "through_middle",
+          "dribbling": "dribble_less",
+          "work_ball_into_box": true,
+          "be_more_expressive": false
+        },
+        "in_transition": {
+          "counter_press": true,
+          "counter": false,
+          "distribute_quickly": false,
+          "distribute_to": "centre_backs",
+          "hold_shape": true
+        },
+        "out_of_possession": {
+          "defensive_line": "much_higher",
+          "line_of_engagement": "higher",
+          "pressing_intensity": "more_urgent",
+          "tackling": "stay_on_feet",
+          "offside_trap": true,
+          "prevent_short_gk_distribution": true,
+          "trigger_press": "more_often"
+        }
+      }
+    },
+    "direct_counter": {
+      "label_zh": "防守反击 (Direct Counter)",
+      "label_en": "Direct Counter-Attack",
+      "description_zh": "穆里尼奥风格：稳固防守、快速反击、长传直传",
+      "mentality": "cautious",
+      "instructions": {
+        "in_possession": {
+          "attacking_width": "fairly_wide",
+          "passing_directness": "more_direct",
+          "tempo": "higher",
+          "time_wasting": "sometimes",
+          "play_out_of_defense": false,
+          "overlap_left": false,
+          "overlap_right": false,
+          "focus_play": null,
+          "dribbling": "run_at_defence",
+          "hit_early_crosses": true
+        },
+        "in_transition": {
+          "counter_press": false,
+          "counter": true,
+          "distribute_quickly": true,
+          "distribute_to": "target_forward",
+          "regroup": true
+        },
+        "out_of_possession": {
+          "defensive_line": "lower",
+          "line_of_engagement": "lower",
+          "pressing_intensity": "less_urgent",
+          "tackling": "get_stuck_in",
+          "offside_trap": false,
+          "prevent_short_gk_distribution": false,
+          "trigger_press": "less_often",
+          "drop_off_more": true,
+          "narrow_defensive_width": true
+        }
+      }
+    },
+    "wing_play": {
+      "label_zh": "两翼齐飞 (Wing Play)",
+      "label_en": "Wing Play",
+      "description_zh": "边路主导：宽度进攻、传中轰炸、边锋突击",
+      "mentality": "positive",
+      "instructions": {
+        "in_possession": {
+          "attacking_width": "extremely_wide",
+          "passing_directness": "slightly_more_direct",
+          "tempo": "higher",
+          "time_wasting": "never",
+          "play_out_of_defense": false,
+          "overlap_left": true,
+          "overlap_right": true,
+          "focus_play": null,
+          "dribbling": "run_at_defence",
+          "hit_early_crosses": true,
+          "float_crosses": false
+        },
+        "in_transition": {
+          "counter_press": false,
+          "counter": true,
+          "distribute_quickly": true,
+          "distribute_to": "flanks"
+        },
+        "out_of_possession": {
+          "defensive_line": "standard",
+          "line_of_engagement": "mid_block",
+          "pressing_intensity": "slightly_more_urgent",
+          "tackling": "stay_on_feet",
+          "offside_trap": false,
+          "prevent_short_gk_distribution": false,
+          "trigger_press": "default"
+        }
+      }
+    },
+    "possession_flexible": {
+      "label_zh": "灵活控球 (Flexible Possession)",
+      "label_en": "Flexible Possession",
+      "description_zh": "平衡打法：控球但不极致、灵活多变、攻守均衡",
+      "mentality": "balanced",
+      "instructions": {
+        "in_possession": {
+          "attacking_width": "fairly_wide",
+          "passing_directness": "shorter",
+          "tempo": "slightly_lower",
+          "time_wasting": "sometimes",
+          "play_out_of_defense": true,
+          "overlap_left": false,
+          "overlap_right": false,
+          "focus_play": null,
+          "dribbling": "default",
+          "be_more_expressive": true
+        },
+        "in_transition": {
+          "counter_press": true,
+          "counter": false,
+          "distribute_quickly": false,
+          "distribute_to": "playmaker",
+          "hold_shape": true
+        },
+        "out_of_possession": {
+          "defensive_line": "higher",
+          "line_of_engagement": "higher",
+          "pressing_intensity": "more_urgent",
+          "tackling": "stay_on_feet",
+          "offside_trap": false,
+          "prevent_short_gk_distribution": true,
+          "trigger_press": "default"
+        }
+      }
+    },
+    "park_the_bus": {
+      "label_zh": "摆大巴 (Park the Bus)",
+      "label_en": "Park the Bus",
+      "description_zh": "极致防守：全员回防、拖延时间、死守到底",
+      "mentality": "defensive",
+      "instructions": {
+        "in_possession": {
+          "attacking_width": "fairly_narrow",
+          "passing_directness": "much_more_direct",
+          "tempo": "lower",
+          "time_wasting": "frequently",
+          "play_out_of_defense": false,
+          "overlap_left": false,
+          "overlap_right": false,
+          "focus_play": null,
+          "dribbling": "dribble_less",
+          "waste_time": true
+        },
+        "in_transition": {
+          "counter_press": false,
+          "counter": true,
+          "distribute_quickly": true,
+          "distribute_to": "target_forward",
+          "regroup": true
+        },
+        "out_of_possession": {
+          "defensive_line": "much_lower",
+          "line_of_engagement": "much_lower",
+          "pressing_intensity": "much_less_urgent",
+          "tackling": "get_stuck_in",
+          "offside_trap": false,
+          "prevent_short_gk_distribution": false,
+          "trigger_press": "much_less_often",
+          "drop_off_more": true,
+          "narrow_defensive_width": true,
+          "force_opponents_outside": true
+        }
+      }
+    },
+    "vertical_tiki_taka": {
+      "label_zh": "垂直传控 (Vertical Tiki-Taka)",
+      "label_en": "Vertical Tiki-Taka",
+      "description_zh": "阿森纳风格：控球为基础但更直接、纵向传球穿透",
+      "mentality": "positive",
+      "instructions": {
+        "in_possession": {
+          "attacking_width": "fairly_narrow",
+          "passing_directness": "slightly_more_direct",
+          "tempo": "higher",
+          "time_wasting": "never",
+          "play_out_of_defense": true,
+          "overlap_left": false,
+          "overlap_right": false,
+          "focus_play": "through_middle",
+          "dribbling": "default",
+          "pass_into_space": true,
+          "work_ball_into_box": true,
+          "be_more_expressive": true
+        },
+        "in_transition": {
+          "counter_press": true,
+          "counter": true,
+          "distribute_quickly": false,
+          "distribute_to": "centre_backs"
+        },
+        "out_of_possession": {
+          "defensive_line": "higher",
+          "line_of_engagement": "much_higher",
+          "pressing_intensity": "extremely_urgent",
+          "tackling": "stay_on_feet",
+          "offside_trap": true,
+          "prevent_short_gk_distribution": true,
+          "trigger_press": "much_more_often"
+        }
+      }
+    },
+    "fluid_counter": {
+      "label_zh": "灵活防反 (Fluid Counter-Attack)",
+      "label_en": "Fluid Counter-Attack",
+      "description_zh": "安切洛蒂风格：弹性防守+快速反击、不拘一格",
+      "mentality": "balanced",
+      "instructions": {
+        "in_possession": {
+          "attacking_width": "standard",
+          "passing_directness": "standard",
+          "tempo": "slightly_higher",
+          "time_wasting": "sometimes",
+          "play_out_of_defense": true,
+          "overlap_left": false,
+          "overlap_right": false,
+          "focus_play": null,
+          "dribbling": "run_at_defence",
+          "be_more_expressive": true,
+          "pass_into_space": true
+        },
+        "in_transition": {
+          "counter_press": false,
+          "counter": true,
+          "distribute_quickly": true,
+          "distribute_to": "flanks"
+        },
+        "out_of_possession": {
+          "defensive_line": "standard",
+          "line_of_engagement": "mid_block",
+          "pressing_intensity": "slightly_more_urgent",
+          "tackling": "stay_on_feet",
+          "offside_trap": false,
+          "prevent_short_gk_distribution": false,
+          "trigger_press": "default"
+        }
+      }
+    }
+  },
+  "mentality_labels": {
+    "very_defensive": {"zh": "全力防守", "en": "Very Defensive"},
+    "defensive": {"zh": "防守", "en": "Defensive"},
+    "cautious": {"zh": "谨慎", "en": "Cautious"},
+    "balanced": {"zh": "平衡", "en": "Balanced"},
+    "positive": {"zh": "积极", "en": "Positive"},
+    "attacking": {"zh": "进攻", "en": "Attacking"},
+    "very_attacking": {"zh": "全力进攻", "en": "Very Attacking"}
+  },
+  "instruction_labels": {
+    "in_possession": {"zh": "持球阶段", "en": "In Possession"},
+    "in_transition": {"zh": "转换阶段", "en": "In Transition"},
+    "out_of_possession": {"zh": "无球阶段", "en": "Out of Possession"}
+  }
+}

@@ -69,20 +69,6 @@ export function ImportModal({ squads, onImport, onSelect, onClose }: Props) {
 
         <h2 style={{ margin: '0 0 12px 0' }}>📤 导入阵容数据</h2>
 
-        {/* FM24 HTML upload */}
-        <div style={{ marginBottom: 14, padding: '12px', background: 'var(--bg-tertiary)', borderRadius: 10 }}>
-          <div style={{ fontWeight: 700, fontSize: 13, marginBottom: 6 }}>
-            🎮 方式一：FM24 导出 HTML（推荐）
-          </div>
-          <div style={{ fontSize: 11, color: 'var(--text-secondary)', marginBottom: 8, lineHeight: 1.6 }}>
-            游戏里 Squad 页 → Ctrl+A → Ctrl+P → Web Page → 保存 → 上传
-          </div>
-          <label className="btn-ghost" style={{ display: 'inline-flex', cursor: 'pointer', fontSize: 12 }}>
-            📁 上传 .html 文件
-            <input type="file" accept=".html,.htm" onChange={doHTMLUpload} hidden />
-          </label>
-        </div>
-
         {/* Paste */}
         <div style={{ marginBottom: 14, padding: '12px', background: 'var(--bg-tertiary)', borderRadius: 10 }}>
           <div style={{ fontWeight: 700, fontSize: 13, marginBottom: 6 }}>
@@ -108,12 +94,41 @@ export function ImportModal({ squads, onImport, onSelect, onClose }: Props) {
           </button>
         </div>
 
-        {/* CSV */}
-        <div style={{ marginBottom: 14 }}>
-          <label className="btn-ghost" style={{ cursor: 'pointer', fontSize: 12 }}>
-            📄 上传 CSV 文件
-            <input type="file" accept=".csv" onChange={doCSVUpload} hidden />
-          </label>
+        {/* FM24 HTML */}
+        <div style={{ marginBottom: 14, padding: '12px', background: 'var(--bg-tertiary)', borderRadius: 10 }}>
+          <div style={{ fontWeight: 700, fontSize: 13, marginBottom: 6 }}>
+            🎮 FM24 导出 HTML / 📊 FMRTE 导出 JSON
+          </div>
+          <div style={{ fontSize: 11, color: 'var(--text-secondary)', marginBottom: 8, lineHeight: 1.6 }}>
+            FM24: Squad → Ctrl+A → Ctrl+P → Web Page → 上传 .html<br />
+            FMRTE: 导出 → JSON → 上传 .json<br />
+            CSV: 拖拽上传 .csv
+          </div>
+          <div style={{ display: 'flex', gap: 8 }}>
+            <label className="btn-ghost" style={{ cursor: 'pointer', fontSize: 12 }}>
+              📁 .html
+              <input type="file" accept=".html,.htm" onChange={doHTMLUpload} hidden />
+            </label>
+            <label className="btn-ghost" style={{ cursor: 'pointer', fontSize: 12 }}>
+              📊 .json
+              <input type="file" accept=".json" onChange={async (e) => {
+                const f = e.target.files?.[0]; if (!f) return
+                setImporting(true); setError('')
+                try {
+                  const form = new FormData(); form.append('file', f)
+                  const res = await fetch('/api/import/json', { method: 'POST', body: form })
+                  const data = await res.json()
+                  if (res.ok && data.success) { onSelect(data.squad_id); onClose() }
+                  else { setError(data.detail || '解析失败') }
+                } catch (e: any) { setError(e.message) }
+                finally { setImporting(false) }
+              }} hidden />
+            </label>
+            <label className="btn-ghost" style={{ cursor: 'pointer', fontSize: 12 }}>
+              📄 .csv
+              <input type="file" accept=".csv" onChange={doCSVUpload} hidden />
+            </label>
+          </div>
         </div>
 
         {/* Sample */}

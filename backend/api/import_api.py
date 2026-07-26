@@ -1,5 +1,6 @@
 """数据导入 API"""
 
+import json
 from fastapi import APIRouter, UploadFile, File, HTTPException
 from pydantic import BaseModel
 from typing import Optional
@@ -7,6 +8,7 @@ from typing import Optional
 from ..importers.fmrte_parser import FMRTEParser
 from ..importers.clipboard_reader import parse_fmrte_clipboard, is_fmrte_data
 from ..importers.fm24_html_parser import parse_fm24_html
+from ..importers.fmrte_json_parser import parse_fmrte_json
 from ..database import get_db, init_db
 
 router = APIRouter(prefix="/api/import", tags=["import"])
@@ -83,6 +85,23 @@ def _save_to_db(players: list, name: str) -> ImportResult:
         message=f"成功导入 {len(clean_players)} 名球员",
         sample_players=sample,
     )
+
+
+@router.post("/json", response_model=ImportResult)
+async def import_json(file: UploadFile = File(...)):
+    """上传 FMRTE JSON 导出文件"""
+    content = await file.read()
+    try:
+        text = content.decode("utf-8-sig")
+    except UnicodeDecodeError:
+        text = content.decode("gbk", errors="replace")
+    try:
+        players = parse_fmrte_json(text)
+    except json.JSONDecodeError as e:
+        raise HTTPException(400, f"JSON 格式错误: {str(e)}")
+    if not players:
+        raise HTTPException(400, "未在 JSON 中找到球员数据")
+    return _save_to_db(players, f"FMRTE JSON_{len(players)}人")
 
 
 @router.post("/csv", response_model=ImportResult)
